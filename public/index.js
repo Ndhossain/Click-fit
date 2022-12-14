@@ -4,7 +4,7 @@ $("#ham-button-open").click(function(){
     $('#nav-menu').addClass("menu-items position-absolute");
     $("#menu-icon").animate({right: '0px'});
 });
-// responsive menu open function
+// responsive menu close function
 $("#ham-button-close").click(function(){
     $('#nav-menu').slideUp("slow", () => {
         $('#nav-menu').removeClass("menu-items position-absolute");
@@ -24,6 +24,27 @@ $(document).ready(function(){
         }
     });
 });
+// excercise card items animation
+$(function () {
+    $('#card').waypoint(function (direction) {
+        console.log(direction)
+        $('#card').css({"top": "-80px", "transition": "1s", 'opacity': 1});
+    },{
+        offset: '100%'
+    })
+})
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 40 ){
+            $('#card').css({"top": "-80px", "transition": "1s", 'opacity': 1});
+        }
+        else{
+            $('#card').css({"top": "200px", "transition": "1s", 'opacity': 0});
+        }
+    });
+});
+
 // ajax call for the api
 $(function () {
     $.get("http://numbersapi.com/1/30/date?json", function(data, status){

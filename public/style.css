@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -17,6 +18,10 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .nav-transparent {
@@ -97,13 +102,19 @@
   }
 }
 
-.visibility {
-  opacity: 0;
+/* excercise card styles */
+
+#card {
+  border: 6px solid rgb(255, 193, 7);
 }
 
-.visibility .animated {
+/* .visibility {
+  opacity: 0;
+} */
+
+/* .visibility .animated {
   opacity: 1;
-}
+} */
 
 .transparent-input {
   background-color: transparent !important;
@@ -123,6 +134,6 @@
   margin: 0 auto;
 }
 
-.form {
-  background-color: rgba(0, 0, 0, 0.5);
+.bg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
