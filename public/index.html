@@ -127,12 +127,25 @@
     <!-- exvercise card -->
     <main>
       <!-- about section -->
-      <section id="about">
-        <h1 class="text-center my-5 text-warning">ABOUT</h1>
+      <section style="width: 90%;" id="about" class="mx-auto">
+        <h1 id="about-heading" class="text-center my-5 text-warning opacity-0 font-bold">ABOUT</h1>
+        <div class="row justify-content-center align-items-center ">
+          <div id="about-left" class="col-md-6 p-3 d-flex justify-content-center opacity-0">
+            <img style="width: 80%;" class="rouded" src="./assets/images/about.jpg" alt="about">
+          </div>
+          <div id="about-right" class="col-md-6 opacity-0">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione soluta illo qui harum, laudantium delectus laboriosam atque consectetur corrupti minus obcaecati repudiandae velit, similique non enim ipsum inventore vitae recusandae?
+              <br>
+              <br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquam fugit eos ratione sequi accusantium blanditiis atque iure quos doloribus dolor ducimus suscipit voluptatibus voluptatem consequatur cum ullam, nesciunt ea consequuntur laudantium aliquid! Obcaecati iure quis magnam et, temporibus nulla error optio asperiores totam voluptatum impedit fugit, a beatae omnis, sunt molestias unde facere sint doloribus voluptas voluptate ipsum! Ab veniam, laboriosam iure asperiores nesciunt blanditiis architecto officia deleniti repudiandae error deserunt fuga iusto quaerat cupiditate, beatae vitae ut a.
+            </p>
+          </div>
+        </div>
       </section>
       <!-- about section -->
-      <!-- Quote section -->
-      <section class="position-relative">
+      <!-- form section -->
+      <section id="add-service" class="position-relative mt-5">
         <div class="bg-dark">
           <img
             class="img-fluid opacity-50 w-100 responsive-banner"
@@ -140,9 +153,59 @@
             alt="about banner"
           />
         </div>
+        <div class="position-absolute top-50 start-50 translate-middle w-100">
+          <div class="row w-100 mx-0">
+          <div class=" bg-transparent-black col-10 col-md-6 p-3 mx-auto">
+          <h1 class="text-center mb-5">Add New Excercise</h1>
+              <form
+                id="formData"
+                enctype="multipart/form-data"
+                action="http://localhost:5000/upload"
+              >
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control transparent-input text-white"
+                    id="floatingInputValue"
+                    placeholder="Excercise Name"
+                    name="excercise"
+                  />
+                  <label for="floatingInputValue">Excercise Name</label>
+                </div>
+                <div class="form-floating mt-3">
+                  <textarea
+                    class="form-control transparent-input text-white"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 100px"
+                    name="details"
+                  ></textarea>
+                  <label for="floatingTextarea2">Description</label>
+                </div>
+                <div>
+                  <p id="filetypeerror" class="text-danger mt-3"></p>
+                  <div
+                    class="mt-1 d-flex align-items-center flex-column rounded dropzone p-4 mt-3"
+                  >
+                    <h1>Drag and drop files....</h1>
+                    <input type="file" name="images" id="fileupload" multiple accept="image/*" />
+                    <h1 id="progress"></h1>
+                    <div id="files" class="row g-2"></div>
+                  </div>
+                </div>
+                <div class="mt-3 w-100">
+                  <button id="submitButton" type="submit" class="btn btn-light w-100">Add Excercise</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- form section -->
+      <!-- Quote section -->
+      <section class="mt-5">
         <div
           id="animate-text"
-          class="position-absolute w-100 top-50 start-50 translate-middle"
         >
           <h1 id="api-text" class="text-center fw-bold visibility"></h1>
           <p class="text-center">
@@ -153,55 +216,6 @@
         </div>
       </section>
       <!-- Quote section -->
-      <!-- form section -->
-      <section id="add-service">
-        <h1 class="text-center my-5">Add New Excercise</h1>
-        <div class="row w-100">
-          <div class="form col-md-6 p-3 mx-auto">
-            <form
-              id="formData"
-              enctype="multipart/form-data"
-              action="http://localhost:5000/upload"
-            >
-              <div class="form-floating">
-                <input
-                  type="text"
-                  class="form-control transparent-input text-white"
-                  id="floatingInputValue"
-                  placeholder="Excercise Name"
-                  name="excercise"
-                />
-                <label for="floatingInputValue">Excercise Name</label>
-              </div>
-              <div class="form-floating mt-3">
-                <textarea
-                  class="form-control transparent-input text-white"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea2"
-                  style="height: 100px"
-                  name="details"
-                ></textarea>
-                <label for="floatingTextarea2">Description</label>
-              </div>
-              <div>
-                <p id="filetypeerror" class="text-danger mt-3"></p>
-                <div
-                  class="mt-1 d-flex align-items-center flex-column rounded dropzone p-4 mt-3"
-                >
-                  <h1>Drag and drop files....</h1>
-                  <input type="file" name="images" id="fileupload" multiple accept="image/*" />
-                  <h1 id="progress"></h1>
-                  <div id="files" class="row g-2"></div>
-                </div>
-              </div>
-              <div class="mt-3 w-100">
-                <button id="submitButton" type="submit" class="btn btn-light w-100">Add Excercise</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      <!-- form section -->
     </main>
     <!-- JQuery cdn link -->
     <script
@@ -241,7 +255,8 @@
     ></script>
     <!-- font awesome cdn -->
     <!-- js linking -->
-    <script src="./index.js"></script>
+    <script src="./animation.js"></script>
+    <script src="./ajax.js"></script>
     <!-- js linking -->
   </body>
 </html>

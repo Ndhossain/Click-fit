@@ -40,7 +40,7 @@ body {
 }
 
 .responsive-banner {
-  min-height: 460px;
+  min-height: 560px;
   object-fit: cover;
 }
 
@@ -107,14 +107,6 @@ body {
 #card {
   border: 6px solid rgb(255, 193, 7);
 }
-
-/* .visibility {
-  opacity: 0;
-} */
-
-/* .visibility .animated {
-  opacity: 1;
-} */
 
 .transparent-input {
   background-color: transparent !important;
