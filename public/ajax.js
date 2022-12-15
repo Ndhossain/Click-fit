@@ -12,6 +12,21 @@ $(function () {
     });
 })
 
+$(function () {
+    $('.quote-button').click(function () {
+        $.get("http://numbersapi.com/1/30/date?json", function(data, status){
+        if(status === 'success') {
+            $("#api-text").text(data.text);
+            $("#type").text(data.type);
+            $("#date").text(data.year);
+            $("#day").text(data.number);
+        } else {
+            $("#api-text").text('No quotes found');
+        }
+        });
+    })
+})
+
 // dropingzone
 Dropzone.autoDiscover = false;
 $(function () {

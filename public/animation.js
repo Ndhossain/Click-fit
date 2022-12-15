@@ -55,7 +55,6 @@ $(function () {
         offset: '75%'
     })
 })
-
 $(function () {
     $('#about').waypoint(function (direction) {
         $('#about-heading').addClass('animate__animated animate__flip opacity-100');
@@ -63,7 +62,7 @@ $(function () {
         $('#about-left').addClass('animate__animated animate__backInLeft opacity-100');
     }, {
         offset: '10%'
-    })
+    });
 })
 
 // about animation off screnview
@@ -80,6 +79,80 @@ $(function () {
 $(function () {
     $('#about').waypoint(function (direction, something) {
         $('#about-heading').removeClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '5%'
+    })
+})
+
+// form heading animation
+
+$(function () {
+    $('#add-service').waypoint(function (direction) {
+        $('#form-heading').addClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '75%'
+    })
+})
+
+$(function () {
+    $('#add-service').waypoint(function (direction) {
+        $('#form-heading').addClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '10%'
+    });
+})
+$(function () {
+    $('#add-service').waypoint(function (direction, something) {
+        $('#form-heading').removeClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '85%'
+    })
+})
+
+$(function () {
+    $('#add-service').waypoint(function (direction, something) {
+        $('#form-heading').removeClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '5%'
+    })
+})
+
+$(function () {
+    $('#add-service').waypoint(function (direction) {
+        $('#form-heading').addClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '75%'
+    })
+})
+
+//quote heading animation
+
+$(function () {
+    $('#quote').waypoint(function (direction) {
+        $('#quote-heading').addClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '75%'
+    })
+})
+
+$(function () {
+    $('#quote').waypoint(function (direction) {
+        $('#quote-heading').addClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '10%'
+    });
+})
+$(function () {
+    $('#quote').waypoint(function (direction, something) {
+        $('#quote-heading').removeClass('animate__animated animate__flip opacity-100');
+    }, {
+        offset: '85%'
+    })
+})
+
+$(function () {
+    $('#quote').waypoint(function (direction, something) {
+        $('#quote-heading').removeClass('animate__animated animate__flip opacity-100');
     }, {
         offset: '5%'
     })

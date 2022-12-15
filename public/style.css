@@ -123,6 +123,35 @@ body {
 
 /* form styles */
 
+.quote-button {
+  font-weight: 900;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 999px;
+  transition: 200ms;
+}
+
+.quote-button:hover {
+  border-radius: 0;
+  box-shadow: rgb(255, 193, 7, .6) 2px 4px 10px 4px;
+}
+
+/* footer styles */
+
+#footer-menus > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 /* common styles */
 
 .bg-transparent-black {
@@ -132,6 +161,10 @@ body {
 .responsive-banner {
   min-height: 560px;
   object-fit: cover;
+}
+
+ul {
+  list-style: none;
 }
 
 /* common styles */
