@@ -49,6 +49,7 @@ $(function () {
             })
         },
         success: function (files, status) {
+            console.log(status);
             if (status.message === 'upload successful') {
                 document.getElementById('formData').reset()
             }
